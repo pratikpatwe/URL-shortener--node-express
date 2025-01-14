@@ -19,12 +19,12 @@ app.get("/:shortId", async (req, res) => {
   { 
     $push: {
       visitHistory: {
-        timestamp: Date.now()
+        timestamp: Date.now(),
       }
     } 
   });
 
-  res.redirect(entry.redirectURL);
+  res.redirect(entry.redirectUrl);
 });
 
 app.listen(PORT, () => {
